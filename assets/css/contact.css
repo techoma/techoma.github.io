@@ -1,0 +1,266 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 by Techoma Creative
+ */
+
+ /*-----------------------------------*\ 
+ * #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colors
+     */
+
+    --green-cyan: hsl(167, 81%, 16%);
+    --green-light: hsl(167, 80%, 44%);
+    --amaranth-orange: hsl(37, 20%, 88%);
+    --royal-green-dark: hsl(167, 82%, 13%);
+    --chrome-yellow: hsl(39, 100%, 52%);
+    --space-cadet-1: hsl(230, 41%, 25%);
+    --brown: hsl(37, 85%, 21%);
+    --dark-orange_50: hsla(29, 99%, 54%, 0.5);
+    --purple-navy: hsl(236, 26%, 43%);
+    --ksu-green: hsl(166, 49%, 25%);
+    --dark-orange: hsl(29, 99%, 54%);
+    --orange: hsl(39, 100%, 50%);
+    --platinum: hsl(0, 0%, 90%);
+    --black_70: hsla(0, 0%, 0%, 0.7);
+    --light-orange: hsl(29, 99%, 67%);
+    --white: hsl(0, 0%, 100%);
+
+    --gradient-1: linear-gradient(90deg,var(--royal-green-dark) 0,var(--ksu-green) 51%,var(--royal-green-dark));
+    --gradient-2: linear-gradient(90deg,var(--light-orange), var(--orange) );
+
+    /**
+   * typography
+   */
+
+   --ff-source-sans-pro: 'Source Sans Pro', sans-serif;
+   --ff-poppins: 'Poppins', sans-serif;
+ 
+   --fs-1: 4.2rem;
+   --fs-2: 3.8rem;
+   --fs-3: 3.2rem;
+   --fs-4: 2.5rem;
+   --fs-5: 2.4rem;
+   --fs-6: 2rem;
+   --fs-7: 1.8rem;
+   --fs-8: 1.5rem;
+ 
+   --fw-500: 500;
+   --fw-600: 600;
+   --fw-700: 700;
+
+  /**
+   * border radius
+   */
+
+   --radius-4: 4px;
+   --radius-12: 12px;
+ 
+   /**
+    * spacing
+    */
+ 
+   --section-padding: 60px;
+ 
+   /**
+    * transition
+    */
+ 
+   --transition-1: 0.15s ease;
+   --transition-2: 0.35s ease;
+   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+   --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+ 
+   /**
+    * shadow
+    */
+ 
+   --shadow: 0 5px 20px 1px hsla(220, 63%, 33%, 0.1);
+
+}
+
+
+
+/*-----------------------------------*\ 
+ * #RESET
+\*-----------------------------------*/
+
+*,
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li { list-style: none}
+
+a { text-decoration: none;}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon { display: block;}
+
+button,
+input {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+button { cursor: pointer;}
+
+input { width: 100%;}
+
+ion-icon { pointer-events: none;}
+
+img { height: auto;}
+
+address { font-style: normal;}
+
+html {
+  font-family: var(--ff-poppins);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--purple-navy);
+  font-size: 1.6rem;
+}
+
+::-webkit-scrollbar { width: 10px;}
+
+::-webkit-scrollbar-track { background-color: hsl(0, 0%, 95%);}
+
+::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%);}
+
+::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%);}
+
+
+
+/*-----------------------------------*\ 
+ * #REUSED STYLE
+\*-----------------------------------*/
+
+.contact .section-title{
+  color: var(--white);
+  padding-top: 150px;
+}
+
+.title{
+  padding:0 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  color:#ffff;
+}
+
+:is(.service-card, .features-card) .title{
+    color: var(--green-cyan);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-700);
+}
+
+:is(.service-card, .features-card) .text{font-size: var(--fs-8);}
+
+
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.contact-banner{ margin-block-end: 30px; }
+
+.contact{
+    background:var(--green-cyan);
+  }
+  
+  .contact .contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5rem 0;
+  }
+  
+  .contact .contact-content .image img{
+    width: 50vw;
+    height:70vh;
+  }
+  
+  .contact .contact-content .form-container{
+    width:50%;
+    padding-right: 6rem;
+  }
+  
+  .contact .contact-content .form-container input, textarea{
+    height:4rem;
+    width:100%;
+    background:#fff;
+    border:none;
+    border-radius: 5rem;
+    padding:0 1rem;
+    margin:1rem 0;
+    color:var(--orange);
+    font-size: 1.7rem;
+    transition: .2s linear;
+  }
+  
+  .contact .contact-content .form-container input:focus, textarea:focus{
+    border:.2rem solid var(--orange);
+  }
+  
+  .contact .contact-content .form-container textarea{
+    height:20rem;
+    border-radius: 1rem;
+    padding:1rem; 
+    resize: none;
+  }
+  
+  .contact .contact-content .form-container input[type="submit"]{
+    width:17rem;
+    background:var(--orange);
+    color:#fff;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .2s;
+  }
+  
+  .contact .contact-content .form-container input[type="submit"]:hover{
+    background:none;
+    color:var(--orange);
+    border:.2rem solid var(--orange);
+  }
+
+
+/**
+ * responsive for larger than 768px screen
+*/
+
+@media (max-width:768px){
+
+  .contact .contact-content{
+    flex-flow: column;
+  }
+
+  .contact .contact-content .image img{
+    height:50vh;
+    width:90vw;
+  }
+
+  .contact .contact-content .form-container{
+    width:90%;
+    padding:0;
+  }
+
+}
