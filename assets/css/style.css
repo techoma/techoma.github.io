@@ -507,9 +507,9 @@ body {
 }
 
 .team .row .card .image{
-    margin:1rem 0rem;
+    margin:1rem 1rem;
     padding-top: 4rem;
-    padding-left: 6rem;
+    padding-left: 5rem;
 }
 
 .team .row .card .image img{
